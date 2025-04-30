@@ -1,18 +1,90 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Taste of Code</title>
-  </head>
+ai-real-estate-platform/
+│
+├── ai-call-agent/
+│   ├── src/
+│   │   ├── app.py              # Main Twilio integration
+│   │   ├── negotiation.py      # Enhanced negotiation logic
+│   │   ├── config.py           # Configuration management
+│   │   ├── utils/              # New utilities folder
+│   │   │   ├── logger.py       # Enhanced logging
+│   │   │   └── validation.py   # Input validation
+│   │   └── __init__.py
+│   ├── tests/
+│   │   ├── conftest.py         # Pytest fixtures
+│   │   ├── test_app.py         # Updated with mocking
+│   │   ├── test_negotiation.py
+│   │   └── test_validation.py  # New validation tests
+│   ├── requirements.txt        # Added pytest-mock, python-dotenv
+│   ├── .env.example            # Environment template
+│   ├── README.md               # Improved setup instructions
+│   └── .github/
+│       └── workflows/
+│           └── ai-call-agent-ci.yml
 
-  <body>
-    <h1>Agenda</h1>
-    <p>On the menu today:</p>
+├── crm-system/
+│   ├── src/
+│   │   ├── models/            # New data models
+│   │   │   └── contact.py     # Contact ORM model
+│   │   ├── database.py        # DB connection handler
+│   │   ├── crm.py             # Class-based CRM implementation
+│   │   └── __init__.py
+│   ├── tests/
+│   │   ├── test_crm.py        # DB tests with setup/teardown
+│   │   └── test_models.py     # Model validation tests
+│   ├── requirements.txt       # Added SQLAlchemy, alembic
+│   ├── alembic/               # Database migrations
+│   ├── .env.example
+│   ├── README.md
+│   └── .github/
+│       └── workflows/
+│           └── crm-system-ci.yml
 
-    <ul>
-      <li>Structure with HTML</li>
-      <li>Styling with CSS</li>
-      <li>Happiness with Lunch</li>
-      <li>Behaviour with jQuery</li>
-    </ul>
-  </body>
-</html>
+├── docusign-automation/
+│   ├── src/
+│   │   ├── lib/
+│   │   │   ├── docusign.js    # Wrapped DS API client
+│   │   │   └── templates.js   # Template processing
+│   │   ├── send_contract.js   # Refactored main logic
+│   │   └── config.js          # Config management
+│   ├── tests/
+│   │   ├── test_send_contract.js
+│   │   └── test_templates.js  # Template tests
+│   ├── package.json           # Added dotenv, jest
+│   ├── .env.example
+│   ├── README.md
+│   └── .github/
+│       └── workflows/
+│           └── docusign-ci.yml
+
+├── titan-dashboard/
+│   ├── src/
+│   │   ├── api/               # New API layer
+│   │   │   └── client.js      # Axios instance
+│   │   ├── context/           # React context
+│   │   │   └── AppContext.jsx
+│   │   ├── components/
+│   │   │   ├── RealTimeCallViewer.jsx # Added hooks
+│   │   │   ├── DealPipeline.jsx       # PropTypes added
+│   │   │   ├── ContractTracker.jsx    # Error boundaries
+│   │   │   └── hooks/         # Custom hooks
+│   │   ├── App.jsx            # Improved routing
+│   │   └── index.js
+│   ├── public/
+│   │   ├── index.html
+│   │   └── config.js          # Runtime config
+│   ├── tests/
+│   │   ├── setupTests.js      # RTL configuration
+│   │   └── ...                # Enhanced test coverage
+│   ├── package.json           # Added axios, react-query
+│   ├── README.md
+│   └── .github/
+│       └── workflows/
+│           └── titan-dashboard-ci.yml
+
+├── shared/                    # New shared resources
+│   ├── schemas/               # JSON schemas for APIs
+│   └── eslint-config/         # Shared linting rules
+│
+├── README.md                  # Added system diagram
+├── .gitignore                 # Enhanced ignores
+└── .pre-commit-config.yaml    # Linting/pre-commit hooks
